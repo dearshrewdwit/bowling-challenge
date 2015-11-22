@@ -9,7 +9,7 @@ GameManager.prototype.addPlayer = function(player) {
 
 GameManager.prototype.play = function(score) {
   this.getPlayer();
-  this.currentPlayer.roll(score);
+  this.currentPlayer.play(score);
 }
 
 GameManager.prototype.getPlayer = function() {

@@ -6,7 +6,8 @@ function Frame() {
 }
 
 Frame.prototype.roll = function(score) {
-   return score || Math.floor(Math.random() * (this.pins + 1));
+  if (score === 0) { return score }
+  else { return score || Math.floor(Math.random() * (this.pins + 1)); }
 }
 
 Frame.prototype.play = function(score) {

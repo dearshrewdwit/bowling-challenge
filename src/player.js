@@ -1,18 +1,18 @@
 function Player(name, game) {
   this.game = game || new Game();
-  this.name = name
+  this.name = name || "Computer";
   this.isStillToRoll = true;
   this.isPlaying = false;
 }
 
-Player.prototype.roll = function(score) {
+Player.prototype.play = function(score) {
   this.startTurn();
-  this.game.roll(score);
+  this.game.play(score);
   this.endTurn();
 }
 
 Player.prototype.changeNameTo = function(newName) {
-  this.name = newName
+  this.name = newName;
 }
 Player.prototype.startTurn = function() {
   this.isPlaying = true;
